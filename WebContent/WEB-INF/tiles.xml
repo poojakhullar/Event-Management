@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseDefn" template="/views/baseLayout.jsp">
+		<put-attribute name="header" value="/views/eventHeader.jsp" />
+		<put-attribute name="body" value="" />		
+	</definition>
+	<definition name="bodyDefn" template="/views/bodyLayout.jsp">	
+		<put-attribute name="body" value="" />		
+	</definition>
+	
+	
+
+	<definition name="landingPage" extends="baseDefn">
+		<put-attribute name="body" value="/views/eventHome.jsp" />
+	</definition>
+	
+	<definition name="loginDefn" extends="bodyDefn">
+		<put-attribute name="body" value="/views/login.jsp" />
+	</definition>
+	
+	<definition name="manageEventDefn" extends="bodyDefn">
+		<put-attribute name="body" value="/views/eventManagement.jsp" />
+	</definition>
+	
+	<definition name="registerDefn" extends="bodyDefn">
+		<put-attribute name="body" value="/views/registration.jsp" />
+	</definition>
+	
+	<definition name="eventDefn" extends="bodyDefn">
+		<put-attribute name="body" value="/views/events.jsp" />
+	</definition>
+
+	<definition name="createEvent" extends="bodyDefn">
+		<put-attribute name="body" value="/views/createEvent.jsp" />
+	</definition>
+
+
+</tiles-definitions>
